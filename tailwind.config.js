@@ -6,7 +6,7 @@ export default {
     extend: {
       colors: {
         primary: "#42B883",
-        secondary: colors.gray["400"],
+        secondary: colors.gray["500"],
         neutral: "#F7F9FA",
       },
       container: {
