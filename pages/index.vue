@@ -1,17 +1,33 @@
 <template>
-  <div>
-    <h1 class="text-3xl font-bold underline text-blue-700 italic">
-      Hello, world! (Tailwind styled)
-    </h1>
-  </div>
-  <div class="flex items-center bg-cyan-200 m-2 p-2">
-    <p class="text-lg text-gray-700">
-      Icon from Iconify:
-    </p>
-    <Icon
-      name="ci:list-checklist"
-      size="32px"
-      style="color: black"
-    />
-  </div>
+  <header class="bg-secondary text-white p-6">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-xl font-light uppercase">Nuxt Exercise 1</div>
+      <nav class="hidden md:block">
+        <ul class="flex gap-x-4">
+          <li v-for="item in headerLinks" :key="item.name">
+            <a :href="item.link" class="transition hover:text-primary">
+              {{ item.name }}
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="bg-secondary">
+    <div>
+      <div></div>
+      <div class="">
+        <img src="~/assets/images/hero-1.png" alt="Nuxt" />
+      </div>
+    </div>
+  </section>
 </template>
+
+<script setup lang="ts">
+const headerLinks = [
+  { name: "About", link: "#about" },
+  { name: "Portfolio", link: "#portfolio" },
+  { name: "Contact", link: "#contact" },
+];
+</script>
